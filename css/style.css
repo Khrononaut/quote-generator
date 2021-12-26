@@ -1,0 +1,62 @@
+@import url(/css/top.css);
+@import url(/css/center.css);
+@import url(/css/bottom.css);
+
+
+/* Main colors */
+:root {
+    --clr-green-primary: #194350;
+    --clr-green-secondary: #9DBEB9;
+    --clr-green-secondary-transparent: #9dbeb981;
+    --clr-red-primary: #FF8882;
+    --clr-red-secondary: #FFC2B4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Setting the font size to 8 px, so I can work with multiples of 8 by using
+the em unit */
+html {
+    font-size: 8px;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background-color: var(--clr-green-primary);
+    padding: 2em 2em 1em 2em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 95vh;
+}
+
+/* Making all the elements except the quote generating button transparent */
+.disabled {
+    opacity: .5;
+}
+
+
+.quote-background {
+    position: relative;
+    height: 35em;
+    width: 37em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .25s;
+}
+
+@media (min-width: 765px) {
+    .info, .anchor{
+      width: 360px;
+    }
+
+    .search {
+        padding: 0 2em;
+    }
+}
