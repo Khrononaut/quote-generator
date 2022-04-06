@@ -1,7 +1,3 @@
-@import url(./css/top.css);
-@import url(/css/center.css);
-@import url(/css/bottom.css);
-
 /* Main colors */
 :root {
   --clr-green-primary: #194350;
