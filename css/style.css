@@ -1,4 +1,4 @@
-@import url(/css/top.css);
+@import url(./css/top.css);
 @import url(/css/center.css);
 @import url(/css/bottom.css);
 
@@ -58,4 +58,199 @@ body {
   .search {
     padding: 0 2em;
   }
+}
+
+.bar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* Information on the quote's author */
+.info {
+  width: 60%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  border-radius: 1em;
+  padding: 1em 1em 1em 2em;
+  background-color: var(--clr-green-secondary);
+  font-size: 1em;
+  transition: all 0.4s;
+  box-shadow: 0px 0.6px 1px -13px rgba(0, 0, 0, 0.129),
+    0px 1.4px 2.1px -13px rgba(0, 0, 0, 0.189),
+    0px 2.3px 3.6px -13px rgba(0, 0, 0, 0.233),
+    0px 3.5px 5.4px -13px rgba(0, 0, 0, 0.271),
+    0px 5px 7.8px -13px rgba(0, 0, 0, 0.305),
+    0px 7.1px 11px -13px rgba(0, 0, 0, 0.339),
+    0px 10.1px 15.6px -13px rgba(0, 0, 0, 0.377),
+    0px 14.6px 22.6px -13px rgba(0, 0, 0, 0.421),
+    0px 22.5px 34.9px -13px rgba(0, 0, 0, 0.481),
+    0px 40px 62px -13px rgba(0, 0, 0, 0.61);
+}
+
+.author {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.author-font {
+  font-size: 12px;
+}
+
+/* Link to the author's SERP */
+.anchor {
+  width: 35%;
+  text-decoration: none;
+  color: black;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.search {
+  width: 100%;
+  border: solid 4px var(--clr-green-secondary);
+  border-radius: 1em;
+  background-color: var(--clr-green-secondary);
+  font-size: 1em;
+  height: 8em;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  transition: all 0.4s;
+  box-shadow: 0px 0.6px 1px -13px rgba(0, 0, 0, 0.129),
+    0px 1.4px 2.1px -13px rgba(0, 0, 0, 0.189),
+    0px 2.3px 3.6px -13px rgba(0, 0, 0, 0.233),
+    0px 3.5px 5.4px -13px rgba(0, 0, 0, 0.271),
+    0px 5px 7.8px -13px rgba(0, 0, 0, 0.305),
+    0px 7.1px 11px -13px rgba(0, 0, 0, 0.339),
+    0px 10.1px 15.6px -13px rgba(0, 0, 0, 0.377),
+    0px 14.6px 22.6px -13px rgba(0, 0, 0, 0.421),
+    0px 22.5px 34.9px -13px rgba(0, 0, 0, 0.481),
+    0px 40px 62px -13px rgba(0, 0, 0, 0.61);
+}
+
+.search:hover {
+  background-color: var(--clr-green-secondary-transparent);
+  color: var(--clr-green-secondary);
+}
+
+.search-info-ctr {
+  font-size: 0.75em;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1em;
+}
+
+.search-font {
+  font-size: 12px;
+}
+
+.magnifier {
+  font-size: 2em;
+}
+
+.quote-circle {
+  background-color: var(--clr-green-secondary);
+  height: 30em;
+  width: 30em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s;
+  padding: 2em 1em 1em; /* Centering the quote manually by setting padding-top to 2em since it seems as if the quote
+    isn't properly centered */
+  box-shadow: 0px 0.6px 1px -13px rgba(0, 0, 0, 0.129),
+    0px 1.4px 2.1px -13px rgba(0, 0, 0, 0.189),
+    0px 2.3px 3.6px -13px rgba(0, 0, 0, 0.233),
+    0px 3.5px 5.4px -13px rgba(0, 0, 0, 0.271),
+    0px 5px 7.8px -13px rgba(0, 0, 0, 0.305),
+    0px 7.1px 11px -13px rgba(0, 0, 0, 0.339),
+    0px 10.1px 15.6px -13px rgba(0, 0, 0, 0.377),
+    0px 14.6px 22.6px -13px rgba(0, 0, 0, 0.421),
+    0px 22.5px 34.9px -13px rgba(0, 0, 0, 0.481),
+    0px 40px 62px -13px rgba(0, 0, 0, 0.61);
+}
+
+.fa-quote-left {
+  position: absolute;
+  color: #628c86;
+  font-size: 88px;
+  top: 0px;
+  left: 0px;
+  filter: drop-shadow(1px 4px 8px #000);
+}
+
+.fa-quote-right {
+  position: absolute;
+  color: #628c86;
+  font-size: 88px;
+  bottom: 0px;
+  right: 0px;
+  z-index: -3;
+  filter: drop-shadow(2px 8px 5px #000);
+}
+
+.quote {
+  text-align: center;
+  margin: 0 20px;
+  font-style: italic;
+  font-size: 5em;
+  z-index: 2;
+}
+
+.generator {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer;
+  background-color: var(--clr-red-secondary);
+  padding: 3em;
+  border-radius: 1em;
+  height: 20em;
+  transition: all 0.25s;
+  box-shadow: 0px 0.6px 1px -13px rgba(0, 0, 0, 0.129),
+    0px 1.4px 2.1px -13px rgba(0, 0, 0, 0.189),
+    0px 2.3px 3.6px -13px rgba(0, 0, 0, 0.233),
+    0px 3.5px 5.4px -13px rgba(0, 0, 0, 0.271),
+    0px 5px 7.8px -13px rgba(0, 0, 0, 0.305),
+    0px 7.1px 11px -13px rgba(0, 0, 0, 0.339),
+    0px 10.1px 15.6px -13px rgba(0, 0, 0, 0.377),
+    0px 14.6px 22.6px -13px rgba(0, 0, 0, 0.421),
+    0px 22.5px 34.9px -13px rgba(0, 0, 0, 0.481),
+    0px 40px 62px -13px rgba(0, 0, 0, 0.61);
+}
+
+.generator:active {
+  box-shadow: 0px 0.3px 2.1px rgba(0, 0, 0, 0.065),
+    0px 0.7px 4.2px rgba(0, 0, 0, 0.131), 0px 1.2px 6.2px rgba(0, 0, 0, 0.197),
+    0px 1.8px 8.3px rgba(0, 0, 0, 0.265), 0px 2.6px 10.3px rgba(0, 0, 0, 0.333),
+    0px 3.7px 12.4px rgba(0, 0, 0, 0.403), 0px 5.3px 14.4px rgba(0, 0, 0, 0.473),
+    0px 7.7px 16.4px rgba(0, 0, 0, 0.545),
+    0px 11.8px 18.3px rgba(0, 0, 0, 0.618), 0px 21px 20px rgba(0, 0, 0, 0.63);
+  transform: translateY(1em);
+}
+
+.generator > p {
+  font-size: 5.5em;
+  padding: 0 16px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #0e0d0d;
+  color: transparent;
+  text-shadow: 0px 1.5px 3px var(--clr-red-primary);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
 }
